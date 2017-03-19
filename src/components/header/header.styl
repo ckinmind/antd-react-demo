@@ -1,0 +1,103 @@
+$headHeight = 64px
+$bgColor = #00bcd4
+$colors = lighten($bgColor, 10%)
+
+.header {
+    width: 100%
+    min-width 1200px
+    height: $headHeight
+    line-height: $headHeight
+    background-color: $bgColor
+    font-size: 14px
+    color: #fff
+
+    .logo {
+        float: left
+        height: $headHeight
+        overflow: hidden
+        padding-left: 6px
+        padding-right: 30px
+        border-right: 1px solid rgba(255, 255, 255, .2)
+
+        i{
+            padding-right: 10px
+        }
+
+        h2 {
+            font-weight: 400
+            vertical-align: middle
+            display: inline-block
+        }
+    }
+
+    .sidebar-toggle {
+        float: left
+        width: 60px
+        margin-top: 20px
+        font-size: 28px
+        cursor: pointer
+    }
+
+    .nav {
+        float: left
+
+        li {
+            float: left
+
+            & > a {
+                display: inline-block
+                padding: 0 20px
+                color: #fff
+            }
+
+            &:hover {
+                background-color: $colors
+            }
+
+            .active {
+                background-color: $colors
+            }
+        }
+    }
+
+    .user-info {
+        float: right
+        padding: 0 18px
+        height: $headHeight
+        border-left: 1px solid rgba(255, 255, 255, .2)
+        border-right: 1px solid rgba(255, 255, 255, .2)
+        cursor: pointer
+
+        &:hover {
+            background-color: $colors
+        }
+
+        & > i {
+            padding-right: 6px
+            font-size: 18px
+        }
+    }
+
+}
+
+
+.user-menu {
+
+    li {
+        padding-left: 16px
+
+        a {
+            color: #333
+        }
+
+        a:hover {
+            color: $colors
+        }
+
+        a > i {
+            padding-right: 10px
+            font-size: 15px
+        }
+
+    }
+}
